@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="Style.css">
+
+<!---Fit to apple mobile---->
+
+                                <link rel="apple-touch-icon" href="appicon.png" />
+                                <link rel="apple-touch-startup-image" href="startup.png">
+                                <meta name="apple-mobile-web-app-capable" content="yes">
+                                <meta name="apple-mobile-web-app-status-bar-style" content="black">
+                                <meta name="viewport" content="width=device-width, user-scalable=no">
+
+
+</head>
+
+<style>
+.logo{
+text-align:center;
+margin-bottom: 75px;
+font-family: Calibri, "Courier Bold", Courier, Georgia, Times, "Times New Roman", serif;
+font-size: 23px;
+color:#ffffe6;
+text-shadow: 2px 2px 4px #000000;
+}
+
+.button {
+        margin-left:60px;
+        -webkit-border-radius: 10px;
+        -webkit-box-shadow: 0px 3px rgba(128, 128, 128, 1),
+        /* gradient effects */
+        0px 4px rgba(118, 118, 118, 1), 0px 5px rgba(108, 108, 108, 1), 0px 6px rgba(98, 98, 98, 1), 0px 7px rgba(88, 88, 88, 1), 0px 8px rgba(78, 78, 78, 1), 0px 14px 6px -1px rgba(128, 128, 128, 1);
+        /* shadow */
+        -webkit-transition: -webkit-box-shadow .1s ease-in-out;
+    }
+    .button span {
+        background-color: #E8E8E8;
+        -webkit-background-size: 100%, 100%, 100%, 4px 4px;
+        -webkit-border-radius: 10px;
+        -webkit-transition: -webkit-transform .1s ease-in-out;
+        display: inline-block;
+        padding: 10px 40px 10px 40px;
+        color: #3A474D;
+        font-weight: 700;
+        font-size: 12px;
+        text-align: center;
+		width:160px;
+    }
+
+</style>
+
+<script>
+
+//pop-up for showing request has been sent
+function request() {
+    var txt;
+    var r = confirm("Checkout your mailbox, and follow the instructions to reset your password!");
+    if (r == true) {
+        window.location='index.html';
+    } else {
+        window.location='index.html';
+    }
+    document.getElementById("request").innerHTML = txt;
+}
+
+//pop-up for showing information when user forgets email address
+function noEmail() {
+    var txt;
+    var r = confirm("Call Admin at: 555-555-5555");
+    if (r == true) {
+        return false;
+    } else {
+        return false;
+    }
+    document.getElementById("noEmail").innerHTML = txt;
+}
+
+</script>
+
+
+<body>
+
+<!---------Logo---------->
+	<div class = "logo">
+		<img class="titleText" src="logo.png" style="width:320px;height:110px; top="0px;""></img>
+	</div>
+
+
+
+<table width="100"  align="center" cellpadding="0" cellspacing="10" style="margin-top:35px;">
+<p style="text-align:center; margin-top:-50px;">Please fill up your registered email in order to reset your password as instructed in the email.</p>
+<table width="100%" border="0" cellpadding="3" cellspacing="5" style="margin-left:70px;">
+	<tr>
+	<td width="294"><input name="email" type="text" id="email" size="25" placeholder = "Email"/></td>
+	</tr>
+     
+
+	<td>&nbsp;</td>
+
+	</tr>
+	
+	</table>
+<button id="request" class="button" onclick="request()"><span>Request A New Password</span></button>
+<br><br>
+<button id="noEmail" onclick="noEmail()" class="button"><span>Forget Your Email?</span></button>
+<br><br>
+<a href="index.html"><button id="cancel" onclick="cancel()" class="button" ><span>Cancel</span></button></a>
+</table>
+
+</body>
+
+
+
+
+
+
+
+
+</html>

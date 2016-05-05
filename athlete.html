@@ -1,0 +1,283 @@
+<!DOCTYPE html PUBLIC>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<!---Fit to apple mobile---->
+
+                                <link rel="apple-touch-icon" href="appicon.png" />
+                                <link rel="apple-touch-startup-image" href="startup.png">
+                                <meta name="apple-mobile-web-app-capable" content="yes">
+                                <meta name="apple-mobile-web-app-status-bar-style" content="black">
+                                <meta name="viewport" content="width=device-width, user-scalable=no">
+
+
+								
+								
+								
+<title>Athlete List</title>
+
+								
+</head>
+
+<style>
+#logo{
+text-align:center;
+margin-bottom: 85px;
+margin-right: 10px;
+font-family: Calibri, "Courier Bold", Courier, Georgia, Times, "Times New Roman", serif;
+font-size: 23px;
+color:#ffffe6;
+text-shadow: 2px 2px 4px #000000;
+}
+
+#menu { 
+	margin-top: -125px;	
+	margin-left: 315px;
+    border-bottom: 15px double black; 
+    border-top: 4px solid black; 
+    content:"";
+    height: 5px; 
+    width:28px;
+	border-color: lightgray;
+	
+}
+
+#back{
+margin-top: -35px;
+margin-left: 8px;
+}
+
+.navi{
+position: 100% fixed;
+border-bottom: 3px solid gray ;
+padding-bottom: 12px;
+}
+
+
+body {
+    font-family: "Lato", sans-serif;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s
+}
+
+.sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+
+.closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px !important;
+    margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+</style>
+
+<script>
+
+//Side menu animation
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+	document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+	document.body.style.backgroundColor = "white";
+}
+
+
+//warning for leaving the page to Add Injury
+function addInjury() {
+    var txt;
+    var r = confirm("Are you sure you want to leave this page? You will lose every information you just put in.");
+    if (r == true) {
+        window.location='newInjury.html';
+    } else {
+        return false;
+    }
+    document.getElementById("add").innerHTML = txt;
+}
+
+//warning for leaving the page to Athlete List
+function athlete() {
+    var txt;
+    var r = confirm("Are you sure you want to leave this page? You will lose every information you just put in.");
+    if (r == true) {
+        window.location='athlete.html';
+    } else {
+        return false;
+    }
+    document.getElementById("athlete").innerHTML = txt;
+}
+
+//warning for leaving the page to Schedule
+function schedule() {
+    var txt;
+    var r = confirm("Are you sure you want to leave this page? You will lose every information you just put in.");
+    if (r == true) {
+        window.location='schedule.html';
+    } else {
+        return false;
+    }
+    document.getElementById("schedule").innerHTML = txt;
+}
+
+//warning for leaving the page to Help
+function help() {
+    var txt;
+    var r = confirm("Are you sure you want to leave this page? You will lose every information you just put in.");
+    if (r == true) {
+        window.location='help.html';
+    } else {
+        return false;
+    }
+    document.getElementById("help").innerHTML = txt;
+}
+
+//warning for leaving the page to Home
+function home() {
+    var txt;
+    var r = confirm("Are you sure you want to leave this page? You will lose every information you just put in.");
+    if (r == true) {
+        window.location='home.html';
+    } else {
+        return false;
+    }
+    document.getElementById("home").innerHTML = txt;
+}
+
+</script>
+
+
+<body>
+
+<!--------Side menu options-------->
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">x</a>
+  <br>
+  <a href="#" id="home" onclick="window.location='home.html'">Home</a>		
+  <br>
+  <a href="#" id="add" onclick="window.location='newInjury.html'">Add Injury</a>		
+  <br>
+  <a href="#" id="athlete" onclick="window.location='athlete.html'">Athlete List</a>		
+  <br>
+  <a href="#" id="schedule" onclick="window.location='schedule.html'">Schedule</a>
+  <br>
+  <a href="#" id="help" onclick="window.location='help.html'">Help</a>  
+  <br>
+  <a href="index.html">Logout</a>
+<br><br><br><br><br><br><br>
+<p style="color: white; margin-left:30px;" >Version: 1.0.0</p>
+</div>
+
+
+<!--------Navigation---------->
+<div class="navi">
+	
+	
+	<!---------Logo---------->
+	<div id = "logo">
+		<img src="logo.png" style="width:210px;height:80px;"></img>
+	</div>
+	
+	<!---Side menu button---->
+	<a onclick="openNav()">
+	<div id="menu"></div>
+	</a>
+	
+	
+	<!-------Back Button-------->
+	<a href="home.html">
+	<img id="back" src="back.png" style="width:47px;height:47px;"></img>
+	</a>
+	
+</div>
+
+<h1 style="text-align:center">Athlete List</h1>
+<!-------------Main Content------------->
+
+
+<!--------Search Bar-------->
+<form id="searchbar"  action="" style="margin-left:45px;">
+    <input id="search" type="text" placeholder="Type here">
+    <input id="submit" type="button" onclick="location.href='searchCollin.html'" value="Search Athlete">
+</form>
+
+
+<!------List------>
+<table width="100" align="center" cellpadding="0" cellspacing="10" style="width:100%">
+
+  <tr>
+    <td><b>Name</b></td>
+	<td><b>Class</b></td>
+	<td><b>Sports</b></td>
+  </tr>
+  <tr>
+    <td>Collin Sullivan</td>
+    <td>2016</td>
+	<td>Lacrosse</td>
+	<td><button onclick="window.location='profile.html'">Profile</button></td>
+  </tr>
+  <tr>
+    <td>Jingyun Wang</td>
+    <td>2016</td>
+	<td>Swimming</td>
+	<td><button>Profile</button></td>
+  </tr>
+  <tr>
+    <td>Mike Durst</td>
+    <td>2016</td>
+	<td>Lacrosse</td>
+	<td><button>Profile</button></td>
+  </tr>
+  <tr>
+    <td>Pinhong He</td>
+    <td>2016</td>
+	<td>Basketball</td>
+	<td><button>Profile</button></td>
+  </tr>
+  <tr>
+    <td>Pat O'Donohue</td>
+    <td>2016</td>
+	<td>Lacrosse</td>
+	<td><button>Profile</button></td>
+  </tr>
+  <tr>
+    <td>Tucker Noel</td>
+    <td>2016</td>
+	<td>Lacrosse</td>
+	<td><button>Profile</button></td>
+  </tr>
+</table>
+
+
+</body>
+
+</html>
