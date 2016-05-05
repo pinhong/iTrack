@@ -1,0 +1,350 @@
+<!DOCTYPE html PUBLIC>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="Style.css" />
+
+    <!---Fit to apple mobile---->
+
+    <link rel="apple-touch-icon" href="appicon.png" />
+    <link rel="apple-touch-startup-image" href="startup.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+
+    <title>Rehabilitation Exercises</title>
+</head>
+
+<style>
+    #logo {
+        text-align: center;
+        margin-bottom: 85px;
+        margin-right: 10px;
+        font-family: Calibri, "Courier Bold", Courier, Georgia, Times, "Times New Roman", serif;
+        font-size: 23px;
+        color: #ffffe6;
+        text-shadow: 2px 2px 4px #000000;
+    }
+    #menu {
+        margin-top: -125px;
+        margin-left: 315px;
+        border-bottom: 15px double black;
+        border-top: 4px solid black;
+        content: "";
+        height: 5px;
+        width: 28px;
+        border-color: lightgray;
+    }
+    #back {
+        margin-top: -35px;
+        margin-left: 8px;
+    }
+    .navi {
+        position: 100% fixed;
+        border-bottom: 3px solid gray;
+        padding-bottom: 12px;
+    }
+    body {
+        font-family: "Lato", sans-serif;
+    }
+    .sidenav {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        right: 0;
+        background-color: #111;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+    }
+    .sidenav a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #818181;
+        display: block;
+        transition: 0.3s
+    }
+    .sidenav a:hover,
+    .offcanvas a:focus {
+        color: #f1f1f1;
+    }
+    .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px !important;
+        margin-left: 50px;
+    }
+    @media screen and (max-height: 450px) {
+        .sidenav {
+            padding-top: 15px;
+        }
+        .sidenav a {
+            font-size: 18px;
+        }
+    }
+    h1 {
+        text-align: center;
+    }
+    .button {
+        margin-left: 127.5px;
+        -webkit-border-radius: 10px;
+        -webkit-box-shadow: 0px 3px rgba(128, 128, 128, 1),
+        /* gradient effects */
+        0px 4px rgba(118, 118, 118, 1), 0px 5px rgba(108, 108, 108, 1), 0px 6px rgba(98, 98, 98, 1), 0px 7px rgba(88, 88, 88, 1), 0px 8px rgba(78, 78, 78, 1), 0px 14px 6px -1px rgba(128, 128, 128, 1);
+        /* shadow */
+        -webkit-transition: -webkit-box-shadow .1s ease-in-out;
+    }
+    .button span {
+        background-color: #E8E8E8;
+        -webkit-background-size: 100%, 100%, 100%, 4px 4px;
+        -webkit-border-radius: 10px;
+        -webkit-transition: -webkit-transform .1s ease-in-out;
+        display: inline-block;
+        padding: 10px 40px 10px 40px;
+        color: #3A474D;
+        font-weight: 700;
+        font-size: 12px;
+        text-align: center;
+    }
+</style>
+<script>
+
+//Side menu animation
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+	document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+	document.body.style.backgroundColor = "white";
+}
+
+
+//warning for leaving the page to Add Injury
+function addInjury() {
+    var txt;
+    var r = confirm("Are you sure you want to leave this page? You will lose every information you just put in.");
+    if (r == true) {
+        window.location='newInjury.html';
+    } else {
+        return false;
+    }
+    document.getElementById("add").innerHTML = txt;
+}
+
+//warning for leaving the page to Athlete List
+function athlete() {
+    var txt;
+    var r = confirm("Are you sure you want to leave this page? You will lose every information you just put in.");
+    if (r == true) {
+        window.location='athlete.html';
+    } else {
+        return false;
+    }
+    document.getElementById("athlete").innerHTML = txt;
+}
+
+//warning for leaving the page to Schedule
+function schedule() {
+    var txt;
+    var r = confirm("Are you sure you want to leave this page? You will lose every information you just put in.");
+    if (r == true) {
+        window.location='schedule.html';
+    } else {
+        return false;
+    }
+    document.getElementById("schedule").innerHTML = txt;
+}
+
+//warning for leaving the page to Help
+function help() {
+    var txt;
+    var r = confirm("Are you sure you want to leave this page? You will lose every information you just put in.");
+    if (r == true) {
+        window.location='help.html';
+    } else {
+        return false;
+    }
+    document.getElementById("help").innerHTML = txt;
+}
+
+//warning for leaving the page to Home
+function home() {
+    var txt;
+    var r = confirm("Are you sure you want to leave this page? You will lose every information you just put in.");
+    if (r == true) {
+        window.location='home.html';
+    } else {
+        return false;
+    }
+    document.getElementById("home").innerHTML = txt;
+}
+//warning for leaving the page to treatment
+function treat() {
+    var txt;
+    var r = confirm("Are you sure you want to leave this page? You will lose every information you just put in.");
+    if (r == true) {
+        window.location='treatment.html';
+    } else {
+        return false;
+    }
+    document.getElementById("treatment").innerHTML = txt;
+}
+function submit() {
+    var txt;
+    var r = confirm("Are you sure you want to submit this injury? You will be returned to the homepage");
+    if (r == true) {
+        window.location='home.html';
+    } else {
+        return false;
+    }
+    document.getElementById("submit").innerHTML = txt;
+}
+
+</script>
+
+<body>
+
+   <!--------Side menu options-------->
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">x</a>
+  <br>
+  <a href=athleteHome.html id="home" >Home</a>		
+  <br>
+  
+
+  <a href="athleteSchedule.html" id="schedule" >Reserve</a>
+  <br>
+   
+  <a href="athleteIndex.html">Logout</a>
+<br><br><br><br><br><br><br>
+<p style="color: white; margin-left:30px;" >Version: 1.0.0</p>
+</div>
+
+
+<!--------Navigation---------->
+<div class="navi">
+	
+	
+	<!---------Logo---------->
+	<div id = "logo">
+		<img src="logo.png" style="width:210px;height:80px;"></img>
+	</div>
+	
+	<!---Side menu button---->
+	<a onclick="openNav()">
+	<div id="menu"></div>
+	</a>
+	
+	
+	<!-------Back Button-------->
+	<a href="athleteHome.html" >
+	<img id="back" src="back.png" style="width:47px;height:47px;"></img>
+	</a>
+	
+	
+	
+	<!----profile---->
+	<!----
+	<a href="google.com">
+		<div id="profile">
+			<img src="profile.png" style="width:35px;height:35px;"></img>
+		</div>
+	</a>
+	---->
+</div>
+
+    <h1>Rehabilitation</h1>
+    <table width="320" align="center" cellpadding="0" cellspacing="5" style="margin-top:25px" action="..//home_trainer.html">
+        <tr>
+            <th>Exercise</th>
+            <th>Duration</th>
+            <th>Sets</th>
+            <th>Reps</th>
+        </tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+
+        <tr>
+            <td width="80">
+                Quad Press
+
+            </td>
+            <td width="80">
+                0
+            </td>
+            <td width="80">
+                3
+            </td>
+            <td width="80"> 12
+            </td>
+        </tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+
+        <tr>
+            <td width="80">
+                Fire Hydrants
+
+            </td>
+            <td width="80">
+                0
+            </td>
+            <td width="80">
+                3
+            </td>
+            <td width="80">
+                6
+            </td>
+
+        </tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+
+        <tr>
+            <td width="80">
+                Leg Raise
+
+            </td>
+            <td width="80">
+                0
+            </td>
+            <td width="80">
+                2
+            </td>
+            <td width="80">
+                12
+            </td>
+
+        </tr>
+
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+
+
+
+
+    </table>
+   
+
+
+</body>
+
+
+
+
+
+
+
+
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html PUBLIC>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="loginStyle.css">
+
+<!---Fit to apple mobile---->
+
+                                <link rel="apple-touch-icon" href="appicon.png" />
+                                <link rel="apple-touch-startup-image" href="startup.png">
+                                <meta name="apple-mobile-web-app-capable" content="yes">
+                                <meta name="apple-mobile-web-app-status-bar-style" content="black">
+                                <meta name="viewport" content="width=device-width, user-scalable=no">
+
+
+
+
+<title>Welcome to Injury Tracker</title>
+
+</head>
+
+<!-------------------------Alert Function---------------------------------->
+<script type="text/javascript">
+	
+	var click = 1;
+	
+	function countClick(){
+		click= click + 1;
+		function colorBox(click){
+		var a_canvas = document.getElementById("a");
+		var context = a_canvas.getContext("2d");
+		context.font = "10px Garamond";
+		context.fillText("picked color",150 * click,175 * click);
+		}
+		
+		colorBox(click);
+	}
+	
+	function loginAlert(){
+		alert("Successfully login if email and password matches to our database, otherwise system will show faild to login warning");
+	}
+	
+	function registerAlert(){
+		alert("This link will lead to register page for unregistered users");
+	}
+
+</script>
+
+<style>
+.title{
+text-align:center;
+margin-bottom: 75px;
+font-family: Calibri, "Courier Bold", Courier, Georgia, Times, "Times New Roman", serif;
+font-size: 23px;
+color:#ffffe6;
+text-shadow: 2px 2px 4px #000000;
+}
+
+
+.register
+    {
+        text-align: center;
+		margin-top: -35px;
+    }
+input
+    {
+  padding: 10px;
+  border: none;
+  border-bottom: solid 2px #c9c9c9;
+  transition: border 0.3s;
+    }
+.login
+    {
+        text-align: center;
+        
+    }
+.submit
+    {
+     width: 240;
+    margin-top: -25px;
+    }
+.forgot
+    {
+     text-align: center;   
+	 padding-top: 15px;
+	}
+button.link {
+    background:none;
+    border:none; 
+    text-align: center;  
+    }
+    
+</style>
+
+
+
+<body>
+
+
+<!--------------------------------------------- Website title ---------------------------------------->
+	<div class = "title">
+		<img class="titleText" src="logo.png" style="width:320px;height:110px; top="0px;""></img>
+	</div>
+
+<!--------------------------------------------- Login Table ---------------------------------------->
+	<table width="100"  align="center" cellpadding="0" cellspacing="10" style="margin-top:20px" action="..//home_trainer.html">
+	<tr>
+	<form>
+	<td>
+	<table width="100%" border="0" cellpadding="3" cellspacing="5">
+	<tr>
+	<td width="294"><input name="email" type="text" id="email" size="25" placeholder = "Email"/></td>
+	</tr>
+        </tr>
+	<tr>
+        </tr>
+	<tr>
+        </tr>
+        <tr>
+        </tr>
+	<tr>
+	<tr>
+	<td><input placeholder="Password" name="password" type="password" id="password" size="25" /></td>
+	</tr>
+	<tr>
+	<td>&nbsp;</td>
+
+	</tr>
+	
+	</table>
+	</td>
+	</form>
+	</tr>
+	</table>
+<div class = "login"><a href="athleteHome.html"><input class = "submit" name="submit" type="button" value="Login"  /></a></div>
+<a href="athleteForgetPW.html"><div class = "forgot"><button class="link">Forgot Password?</button></div></a>
+
+	
+	
+</body>
+</html>
